@@ -1,0 +1,148 @@
+/* team  */
+
+nav{
+    text-align: center;
+    color: aliceblue;
+    padding: 1% 1% 1% 1%;
+    /* display: inline-block */
+    /* flex-direction: row-reverse; */
+    justify-content: center;
+
+}
+
+nav h1{
+    transition: 0.3s;   
+    font-weight: 400;
+    /* align-items: center; */
+    vertical-align: text-top
+}
+
+nav img {
+    width: 60px;
+    transition: 0.4s;
+    box-shadow: none;
+
+}
+nav img:hover {
+    scale: 1.2;
+}
+
+
+
+
+nav h1:hover{
+    scale: 1.1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    min-height: 100vh;
+    background: #0c192c;;
+}
+
+
+
+
+
+@media(max-width: 700px) {
+    .container{
+        flex-direction: column;
+        min-height: 80vh;
+    }
+    .img-col{
+        padding: 6% 6% 6% 6%;
+    }
+    .text-col{
+        padding-top: 10%;
+    }
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+img{
+    max-width: 100%;
+    border-radius: 10%;
+    cursor: pointer;
+    box-shadow: 0 0 40px 1px #ffffff;
+
+}
+
+.img-col {
+    flex-basis: 30%;
+}
+
+.text-col{
+    align-items: center;
+    text-align: center;
+    padding-left: 8%;
+    padding-bottom: 8%;
+}
+
+.text-col h1{
+    font-size: xx-large;
+    margin: auto;
+}
+
+
+
+.con{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.bubble{
+    position: relative;
+    display: flex;
+    z-index: -100;
+}
+
+.bubble span{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+
+    animation: animate 15s linear infinite;
+    animation-duration: calc(300s / var(--i));
+
+}
+
+.bubble span:nth-child(even){
+    background: #ff2d75;
+    box-shadow: 0 0 10px #dc4fa844,
+    0 0 50px #dc4fc7,
+    0 0 100px #4fdc4f;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateY(10vh) scale(0.3);
+    }
+    50%{
+        transform: translateY(600vh) scale(0);
+    }
+    100%{
+        transform: translateY(-10vh) scale(0.5);
+    }
+}
